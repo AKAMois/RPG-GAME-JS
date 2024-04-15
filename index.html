@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="utf-8">
+    <!--LIBRERIAS-->
+    <script src="jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="./styles.css">
     <title>RPG - Dragon Repeller</title>
-</head>
-
-<body>
+  </head>
+  <body>
+    <!--GIFT-->
+    <img id="egggif" src="kirby.gif" alt="Easter Egg">
+    <!--GAME-->
     <div id="game">
-        <div id="stats">
-            <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
+
+       <!--STATS-->
+      <div id="stats">
+        <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
         <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
         <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
-        </div>
-
-        <div id="controls">
-            <button id="button1">Go to store</button>
-            <button id="button2">Go to cave</button>
-            <button id="button3">Fight dragon</button>
-        </div>
-
-        <div id="monsterStats">
-            <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
-            <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
-        </div>
-
-        <div id="text">
-            Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
-        </div>
+      </div>
+       <!--CONTROLES-->
+      <div id="controls">
+        <button id="button1">Go to store</button>
+        <button id="button2">Go to cave</button>
+        <button id="button3">Fight dragon</button>
+      </div>
+       <!--ESTATSMONSTRUO-->
+      <div id="monsterStats">
+        <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+        <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+      </div>
+       <!--TEXTOJUEGO-->
+      <div id="text">
+        Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
+      </div>
     </div>
-<script src="script.js"></script>
-</body>
+
+    <div class="container" id="controlsegg">
+      <div class="text" id="button1">You found an EasterEgg!! Type: "up,up,down,down,left,right,left,right,b,a" if u want to see something cool.</div>
+    </div>
+    <!--SCRIPT-->
+    <script src="./script.js"></script>
+  </body>
 </html>

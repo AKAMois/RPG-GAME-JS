@@ -1,44 +1,176 @@
-body{
-    background-color: #0a0a23;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
-#text{
-    background-color: #0a0a23;
-    color: #ffffff;
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #c11e38, #220b34);
+}
+
+#game {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 400px;
+    z-index: 1;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+
+#stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     padding: 10px;
 }
-#game{
-    max-width: 500px;
-    max-height: 400px;
-    background-color: #ffffff;
-    color: #ffffff;
-    margin-top: 30px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;    
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
 }
-#controls, #stats{
-    border: 1px solid #0a0a23;
-    color: #0a0a23;
-    padding: 5px;
+
+#controls button {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 400px;
+    z-index: 1;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
 }
-#monsterStats{
+
+#controls button:hover {
+    letter-spacing: 3px;
+}
+
+#controls button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translate(0);
+    transition: 0.5s;
+    filter: blur(0px);
+}
+
+#controls button:hover::before {
+  transform: skewX(45deg) translate(200px);
+}
+#monsterStats {
+  display: none;
+  border: 3px solid #FF90B3;
+  padding: 10px;
+  color: #ffffff;
+  background-color:rgba(255, 255, 255, 0.05);;
+  border-radius: 10px;
+}
+
+.stat {
+  padding-right: 10px;
+}
+
+
+#egggif {
     display: none;
-    border: 1px solid #0a0a23;
-    padding: 5px;
-    color: #ffffff;
-    background-color: #c70d0d;
-}
-
-.stat{
-    padding-right: 10px;
-}
-
-button {
-    cursor: pointer;
-    color: #0a0a23;
-    background-color: #feac32;
-    background-image: linear-gradient(#fecc4c, #ffac33);
-    border: 3px solid #feac32;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    bottom: 150px;
   }
+
+
+#controlsegg div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 450px;
+        height: 50px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        padding: 10px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 400px;
+        z-index: 1;
+        transition: 0.5s;
+        backdrop-filter: blur(15px);
+    }
+
+
+
+    .container {
+        position: absolute;
+        width: 450px;
+        height: 450px;
+      }
+
+      .text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #c3ac76;
+        color: white;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      
+      .container:hover .text {
+        opacity: 1;
+      }
